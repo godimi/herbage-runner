@@ -1,0 +1,24 @@
+{
+  "name": "herbage-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godimi/herbage-runner.git"
+  },
+  "author": "jaykim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/godimi/herbage-runner/issues"
+  },
+  "homepage": "https://github.com/godimi/herbage-runner#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0"
+  }
+}

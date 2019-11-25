@@ -6,4 +6,4 @@ make shell script file
 cd [DOCKER_COMPOSE_YML_PATH] || exit
 docker-compose up-d
 ```
-and define its path to environment variable
+and define its path to environment variable (RUN_SCRIPT_PATH)

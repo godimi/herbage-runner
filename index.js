@@ -16,19 +16,16 @@ router.post("/webhook", ctx => {
       if (response.data.state !== "success") return;
 
       console.log("docker-compose up command called");
-      exec(
-        `cd ${process.env.DOCKER_COMPOSE_PATH} && docker-compose up -d`,
-        (err, stdout, stderr) => {
-          if (err) {
-            //some err occurred
-            console.error(err);
-          } else {
-            // the *entire* stdout and stderr (buffered)
-            console.log(`stdout: ${stdout}`);
-            console.log(`stderr: ${stderr}`);
-          }
+      exec(`sh ${process.env.RUN_SCRIPT_PATH}`, (err, stdout, stderr) => {
+        if (err) {
+          //some err occurred
+          console.error(err);
+        } else {
+          // the *entire* stdout and stderr (buffered)
+          console.log(`stdout: ${stdout}`);
+          console.log(`stderr: ${stderr}`);
         }
-      );
+      });
     })
     .catch(function(error) {
       console.log(error);

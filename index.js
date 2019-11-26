@@ -6,7 +6,7 @@ const { exec } = require("child_process");
 const app = new Koa();
 const router = new Router();
 
-router.post("/webhook", ctx => {
+router.post("/", ctx => {
   const { callback_url } = ctx.request.body;
   if (!callback_url) return;
 
